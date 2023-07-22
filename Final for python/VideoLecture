@@ -1,0 +1,8 @@
+import numpy as np
+
+base = np.fromfile('./Packet_Base.txt', dtype=int, sep='\n')
+weight = np.fromfile('./Packet_Weight.txt', dtype=float, sep='\n')
+
+print(np.split(base * weight, len(base)/ 8)[:4])
+#print(np.split (base, len(base)/ 8)[:4])
+#print(weight)
